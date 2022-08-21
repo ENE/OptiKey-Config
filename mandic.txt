@@ -1,0 +1,25 @@
+# TODO in Python
+(não mais em Bash)
+
+Um gerenciador de dicionário para:
+
+  - pesquisar entradas semelhantes
+  - excluir entrada exata previamente conhecida
+  - ajustar o peso de uma entrada
+  - adicionar entrada (por exemplo, após exclusão de errada)
+  - fazer backup do arquivo instalado
+  - implantar novo arquivo reexecutando o OptiKey
+
+#!/bin/bash
+
+FILE="PortuguesePortugal.dic"
+
+# When on Windows machine
+INSDIR="C:\\Users\\alber\\AppData\\Roaming\\Optikey\\OptiKey\\Dictionaries"
+
+echo $1
+case "$1" in
+  search|s)
+    grep "$2" $FILE
+    ;;
+esac
